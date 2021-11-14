@@ -24,7 +24,7 @@ jobs:
         R -e 'install.packages(c("here", "tidyverse", "ggthemes", "readr", "rjson"))'
     # Run R script
     - name: Update time-since-vax-ita.R
-      run: Rscript time-since-vax-ita.R
+      run: Rscript src/time-since-vax-ita.R
 
 
      
