@@ -41,7 +41,7 @@ s %>% ggplot(mapping = aes(x = fascia_anagrafica, y = dosi, fill = tempo_dal_vac
   xlab("Fascia Anagrafica") +
   ylab("% vaccinati") +
   labs(title = "Tempo trascorso da completamento ciclo vaccinale con doppia dose",
-    subtitle = "Sono escluse le persone che hanno ricevuto una sola dose (J&J o pregressa infezione)",
+    #subtitle = "Sono escluse le persone che hanno ricevuto una sola dose (J&J o pregressa infezione)",
     caption = paste("Fonte dati: Covid-19 Opendata Vaccini | Data aggiornamento:", last_update),
     fill = "Tempo trascorso dal vaccino") +
   theme(legend.position = "bottom")
