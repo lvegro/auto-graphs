@@ -17,7 +17,7 @@ for (i in format(seq(as.Date("2021-01-01"),
                      Sys.Date(),
                      by = 1), "%Y-%m-%d")) {
   t <- tryCatch(
-    readr::read_csv(paste0(url, i, "/", fname)),
+    readr::read_csv(paste0(url, i, "/", fname, show_col_types=FALSE)),
     error = function(e) {
       tibble()
     }
