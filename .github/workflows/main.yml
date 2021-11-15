@@ -21,10 +21,13 @@ jobs:
     # Set-up R
     - name: Install packages
       run: |
-        R -e 'install.packages(c("here", "tidyverse", "ggthemes", "readr", "rjson"))'
+        R -e 'install.packages(c("here", "tidyverse", "ggthemes", "readr", "rjson", "lubridate"))'
     # Run R script
     - name: Update time-since-vax-ita.R
       run: Rscript src/time-since-vax-ita.R
+    # Run R script
+    - name: Update iss-deaths-age.R
+      run: Rscript src/iss-deaths-age.R
 
 
      
