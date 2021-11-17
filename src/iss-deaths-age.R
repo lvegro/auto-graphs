@@ -76,7 +76,7 @@ txt90 <- data1 %>%
     mutate(position = `90+`/(`<90` + `90+`),
            text = as.character(round(position*100, 1)))
 
-png(filename = here::here("output/", "iss-deaths-age-rel.png"), width = 465, height = 225, units='mm', res = 300)
+png(filename = "/Users/runner/work/auto-graphs/auto-graphs/output/iss-deaths-age-rel.png"), width = 465, height = 225, units='mm', res = 300)
 
 data1 %>%
     filter(week >= as.Date("2021-01-01")) %>% 
@@ -113,7 +113,7 @@ data1 %>%
                                         col="white")
 dev.off()
 
-png(filename = here::here("output/", "iss-deaths-age-abs.png"), width = 465, height = 225, units='mm', res = 300)
+png(filename = "/Users/runner/work/auto-graphs/auto-graphs/output/iss-deaths-age-abs.png"), width = 465, height = 225, units='mm', res = 300)
 
 data1 %>%
     filter(week >= as.Date("2021-01-01")) %>% 
