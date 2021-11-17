@@ -9,7 +9,7 @@ on:
 
 
 jobs: 
-  update_rt:
+  update_graphs:
     # The type of runner that the job will run on
     runs-on: macos-latest
 
@@ -17,17 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: r-lib/actions/setup-r@master
-
-    # Set-up R
-    - name: Install packages
-      run: |
-        R -e 'install.packages(c("here", "tidyverse", "ggthemes", "readr", "rjson", "lubridate"))'
-    # Run R script
-    - name: Update time-since-vax-ita.R
-      run: Rscript src/time-since-vax-ita.R
-    # Run R script
-    - name: Update iss-deaths-age.R
-      run: Rscript src/iss-deaths-age.R
+    # Run script
+    - name: Update all.R
+      run: Rscript src/exe/run-this.R
 
 
      
