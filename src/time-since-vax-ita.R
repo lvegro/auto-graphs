@@ -2,7 +2,6 @@ library(tidyverse)
 library(readr)
 library(ggthemes)
 library(rjson)
-library(here)
 
 last_update <- fromJSON(file = "https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati/last-update-dataset.json")
 last_update <- substr(last_update[[1]], 1, 19)
@@ -31,7 +30,7 @@ s$tempo_dal_vaccino <-
   factor(s$tempo_dal_vaccino,
          levels = c("< 3 mesi", "Tra 3 e 6 mesi", "Più di 6 mesi"))
 
-png(filename = here::here("output/", "time-since-vax-ita.png"), width = 465, height = 225, units='mm', res = 300)
+png(filename = "/Users/runner/work/auto-graphs/auto-graphs/output/time-since-vax-ita.png"), width = 465, height = 225, units='mm', res = 300)
 
 s %>% ggplot(mapping = aes(x = fascia_anagrafica, y = dosi, fill = tempo_dal_vaccino))  +
   geom_col(position = "fill") +
